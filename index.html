@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--  LOGIN PAGE -->
+<div id="loginPage">
+  <div class="login-box">
+    <div class="login-logo">
+      <div class="icon">🎓</div>
+      <h1>Student Management System</h1>
+      <p>SRMU — Lucknow</p>
+    </div>
+
+    <div class="role-tabs">
+      <button class="role-tab active" onclick="switchRole('student')">Student</button>
+      <button class="role-tab" onclick="switchRole('admin')">Admin</button>
+    </div>
+
+    <div class="form-group">
+      <label id="idLabel">Student ERP ID</label>
+      <input type="text" id="loginId" placeholder="Enter ERP ID (e.g. 240011001)"/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="loginPass" placeholder="Enter your password"/>
+    </div>
+
+    <button class="login-btn" onclick="doLogin()">Login →</button>
+    <p class="error-msg" id="loginError"> Invalid ID or Password</p>
+
+    <div class="demo-hint">
+      <b>Demo Login:</b><br>
+      Student ERP: <b>240011001</b> / Pass: <b>student123</b><br>
+      Admin ID: <b>admin</b> / Pass: <b>admin123</b>
+    </div>
+  </div>
+</div>
+
+<!--  MAIN APP  -->
+<div id="app">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <div class="ico">🎓</div>
+      <span>SMS Portal</span>
+    </div>
+
+    <div id="navLinks"></div>
+
+    <div class="sidebar-bottom">
+      <div class="user-card">
+        <div class="user-avatar" id="sidebarAva">V</div>
+        <div class="user-info">
+          <small id="sidebarRole">Student</small>
+          <b id="sidebarName">Varsha</b>
+        </div>
+        <button class="logout-btn" onclick="logout()" title="Logout">⏻</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main" id="mainContent"></div>
+</div>
+
+<!-- Add Student Modal -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <h3 id="modalTitle">Add New Student</h3>
+    <div class="modal-grid">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="fName" placeholder="Student name"/>
+      </div>
+      <div class="form-group">
+        <label>ERP ID</label>
+        <input type="text" id="fErp" placeholder="24001100XXXX"/>
+      </div>
+      <div class="form-group">
+        <label>Course</label>
+        <input type="text" id="fCourse" placeholder="e.g. Diploma CS"/>
+      </div>
+      <div class="form-group">
+        <label>Semester</label>
+        <input type="text" id="fSem" placeholder="e.g. 4th"/>
+      </div>
+      <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" id="fMobile" placeholder="10-digit number"/>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" id="fEmail" placeholder="student@email.com"/>
+      </div>
+      <div class="form-group full">
+        <label>Password</label>
+        <input type="text" id="fPass" placeholder="Set login password"/>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveStudent()">Save Student</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
