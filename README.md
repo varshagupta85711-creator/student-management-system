@@ -6,21 +6,21 @@ The application uses LocalStorage to store data within the browser, ensuring dat
 -:Key Features:-
 
 1.Student Login and Admin Login  
- 2.Student Profile Management
- 3.ERP ID Management
- 4.Attendance Tracking
- 5.Marks and Result Management
- 6.Add, Edit, and Delete Student Records
- 7.Secure Authentication System
- 8.Browser LocalStorage Data Persistence
- 9.Responsive and User-Friendly Interface
+2.Student Profile Management   
+3.ERP ID Management   
+4.Attendance Tracking   
+5.Marks and Result Management   
+6.Add, Edit, and Delete Student Records   
+7.Secure Authentication System    
+8.Browser LocalStorage Data Persistence    
+9.Responsive and User-Friendly Interface    
 
 -:Technologies Used:-
 
-1.HTML5
- 2.CSS3
- 3.JavaScript
- 4.Browser LocalStorage
+1.HTML5   
+2.CSS3   
+3.JavaScript   
+4.Browser LocalStorage   
 
 -:Objective:-
 
